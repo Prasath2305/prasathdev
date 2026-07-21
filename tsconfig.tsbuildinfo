@@ -1,0 +1,1 @@
+{"root":["./src/glsl.d.ts","./src/lenis.ts","./src/magnetic.ts","./src/main.ts","./src/vite-env.d.ts","./src/sections/about.ts","./src/sections/contact.ts","./src/sections/footer.ts","./src/sections/hero.ts","./src/sections/music.ts","./src/sections/navigation.ts","./src/sections/preloader.ts","./src/sections/projects.ts","./src/sections/skills.ts"],"version":"5.8.3"}

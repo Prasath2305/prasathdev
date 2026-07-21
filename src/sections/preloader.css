@@ -1,0 +1,54 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  overflow: hidden;
+  background: var(--bg-dark);
+  color: #fff;
+}
+
+.preloader-counter {
+  position: fixed;
+  top: 50svh;
+  left: 2rem;
+  transform: translateY(-50%) scale(0.25);
+  transform-origin: left bottom;
+  will-change: transform;
+}
+
+.preloader-counter h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 25vw, 25rem);
+  line-height: 1;
+}
+
+.preloader-counter .digit {
+  position: relative;
+  display: inline-block;
+  will-change: transform;
+}
+
+.preloader-bar {
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+  width: calc(100% - 4rem);
+  height: 1.5px;
+  background: #3a3a3a;
+  transform-origin: left;
+  overflow: hidden;
+}
+
+.preloader-bar__fill {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform-origin: left;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+.preloader.is-done {
+  pointer-events: none;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prasath — Developer</title>
+  <meta name="description" content="Portfolio of Prasath — web & app developer." />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-counter"><h1>0</h1></div>
+    <div class="preloader-bar"><div class="preloader-bar__fill"></div></div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav">
+    <a href="#home" class="nav__brand" aria-label="Prasath — home">
+      <svg class="nav__brand-mark" id="nav-brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <g>
+          <rect x="18" y="0" width="4" height="40" rx="1" fill="currentColor" />
+          <rect x="18" y="0" width="4" height="40" rx="1" fill="currentColor" transform="rotate(45 20 20)" />
+          <rect x="18" y="0" width="4" height="40" rx="1" fill="currentColor" transform="rotate(90 20 20)" />
+          <rect x="18" y="0" width="4" height="40" rx="1" fill="currentColor" transform="rotate(135 20 20)" />
+        </g>
+      </svg>
+      <span class="nav__brand-name">Prasath</span>
+    </a>
+
+    <button class="nav__btn-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span class="nav__btn-icon" aria-hidden="true"><span></span><span></span></span>
+      <span class="nav__btn-label">
+        <span data-label="open">Menu</span>
+        <span data-label="close">Close</span>
+      </span>
+    </button>
+  </header>
+
+  <div class="menu" id="nav-menu" aria-hidden="true">
+    <div class="menu__lanes" id="nav-menu-lanes"><!-- lanes filled by navigation.ts --></div>
+  </div>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero-section">
+      <div class="hero-sticky">
+        <canvas class="hero-canvas hero-canvas--1"></canvas>
+        <canvas class="hero-canvas hero-canvas--2"></canvas>
+        <div class="hero-text-overlay">
+          <h1 class="hero-dynamic-text">PRASATH</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about">
+      <h2 class="animate-text">
+        I'm Prasath — a developer who moves from idea to interface without
+        losing the thread. Currently building web and mobile products
+        across three teams, one careful line of code at a time.
+      </h2>
+    </section>
+
+    <!-- ===== WHAT I DO ===== -->
+    <section id="what-i-do" class="services">
+      <div class="services-header"><img src="/img/whatido.svg" alt="What I do" /></div>
+      <div class="services-header"><img src="/img/whatido.svg" alt="" /></div>
+      <div class="services-header"><img src="/img/whatido.svg" alt="" /></div>
+    </section>
+    <section class="services-copy">
+      <h2 class="animate-text">
+        I build end-to-end web and mobile products — from interface to
+        database — with React, Next.js, Node.js and cloud platforms,
+        chasing GSAP-driven detail along the way.
+      </h2>
+    </section>
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="projects">
+      <header class="projects-intro">
+        <h1 class="projects-intro__title">Selected Work</h1>
+        <p class="projects-intro__hint">Scroll to explore</p>
+      </header>
+
+      <div id="projects-grid"><!-- filled by projects.ts: .grid pairs interleaved with flowing curved text --></div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="skills">
+      <button class="reset pill" id="skills-reset" type="button">Drop again</button>
+      <div class="skills-stage" id="skills-stage" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== MUSIC ===== -->
+    <section id="music" class="music-section">
+      <div class="music-sticky">
+        <canvas id="webgl"></canvas>
+        <div class="music-caption">
+          <p>What I've had on repeat while building this.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact">
+      <h1 class="reveal-text" data-text="Let's build something.">Let's build something.</h1>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-lede">
+            Have a project, a role, or just a question? I read every
+            message and reply from prasath232305@gmail.com.
+          </p>
+          <div class="contact-links">
+            <a class="magnetic contact-link" href="mailto:prasath232305@gmail.com">prasath232305@gmail.com</a>
+            <a class="magnetic contact-link" href="tel:+919788599074">+91 97885 99074</a>
+            <p class="contact-location">Melmaruvathur, Tamil Nadu, India</p>
+          </div>
+          <div class="contact-socials">
+            <a class="magnetic pill" href="https://github.com/Prasath2305" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="magnetic pill" href="https://linkedin.com/in/prasath2305" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="magnetic pill" href="https://instagram.com/sarathi_prasath" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <label class="field">
+            <span>Name</span>
+            <input name="name" type="text" required />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input name="email" type="email" required />
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="pill" id="contact-submit">Send message</button>
+          <p class="contact-status" id="contact-status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <nav class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#what-i-do">What I do</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#music">Music</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <a class="magnetic footer-email" href="mailto:prasath232305@gmail.com">prasath232305@gmail.com</a>
+        <div class="footer-socials">
+          <a class="magnetic pill" href="https://github.com/Prasath2305" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="magnetic pill" href="https://linkedin.com/in/prasath2305" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="magnetic pill" href="https://instagram.com/sarathi_prasath" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="footer-name">PRASATH</h2>
+
+    <div class="footer-bottom">
+      <p id="footer-year"></p>
+      <button class="magnetic pill" id="back-to-top" type="button">Back to top</button>
+    </div>
+  </footer>
+
+  <!-- SVG filters used by the Projects text-on-path effect -->
+  <svg class="hidden" aria-hidden="true">
+    <defs>
+      <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="0" result="blur" data-min-deviation="0" data-max-deviation="10"/>
+        <feMerge><feMergeNode in="blur"/></feMerge>
+      </filter>
+      <filter id="blur2" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="0" result="glow" data-min-deviation="0" data-max-deviation="30"/>
+        <feColorMatrix result="bluralpha" type="matrix" values="0 -1 0 0 0 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1.8 0 "/>
+        <feOffset in="bluralpha" dx="0" dy="0" result="offsetBlur"/>
+        <feMerge><feMergeNode in="offsetBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+  </svg>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

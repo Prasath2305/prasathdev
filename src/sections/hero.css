@@ -1,0 +1,52 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+  background: var(--bg-dark);
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-canvas--1 {
+  z-index: 2;
+}
+
+.hero-canvas--2 {
+  z-index: 1;
+}
+
+.hero-text-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hero-dynamic-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(3rem, 12vw, 9rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  filter: blur(0px);
+  will-change: opacity, filter;
+}

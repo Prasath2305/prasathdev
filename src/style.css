@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Manrope:wght@200..800&family=DM+Sans:wght@400;500;700;900&family=Inter:wght@400;500;600;900&display=swap");
+@import "./sections/preloader.css";
+@import "./sections/navigation.css";
+@import "./sections/hero.css";
+@import "./sections/about.css";
+@import "./sections/projects.css";
+@import "./sections/skills.css";
+@import "./sections/music.css";
+@import "./sections/contact.css";
+@import "./sections/footer.css";
+
+/* ===============================================
+   GLOBAL RESET + BASE
+   =============================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Shared by every dark section (Hero, About, What I Do, Outro, Projects,
+     Music, Preloader) so there's no visible seam scrolling between them. */
+  --bg-dark: #0a0a0a;
+}
+
+html,
+body {
+  width: 100%;
+  background: var(--bg-dark);
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.hidden {
+  position: absolute;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Shared pill button, used by Skills/Contact/Footer */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Nudges toward the cursor on hover — see src/magnetic.ts */
+.magnetic {
+  display: inline-block;
+  will-change: transform;
+}

@@ -1,0 +1,87 @@
+.site-footer {
+  position: relative;
+  width: 100%;
+  background: #f4f1ea;
+  color: #0a0a0a;
+  font-family: "Inter", system-ui, sans-serif;
+  padding: 4rem 6vw 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.site-footer .pill {
+  border-color: #0a0a0a;
+}
+
+.site-footer .pill:hover {
+  background: #0a0a0a;
+  color: #f4f1ea;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-nav a {
+  width: fit-content;
+  font-size: 1.1rem;
+  color: rgba(10, 10, 10, 0.7);
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #0a0a0a;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-email {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-name {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #0a0a0a;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 13vw, 10rem);
+  line-height: 1;
+  text-align: center;
+  user-select: none;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgba(10, 10, 10, 0.15);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(10, 10, 10, 0.6);
+}

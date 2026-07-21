@@ -1,0 +1,154 @@
+.projects {
+  --color-text: #fff;
+  --color-bg: var(--bg-dark);
+  --color-link: #8a8a8a;
+  --color-link-hover: #fff;
+  --color-description: #8a8a8a;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Playfair Display", serif;
+  padding-bottom: 10vh;
+}
+
+.projects-intro {
+  min-height: 100vh;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.projects-intro__title {
+  font-size: clamp(3rem, 14vw, 11rem);
+  margin: 0;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.projects-intro__hint {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin: 8vh 0 0 0;
+  color: var(--color-link);
+}
+
+.projects-intro__hint::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 2rem;
+  top: calc(100% + 2rem);
+  left: 50%;
+  background-color: currentColor;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, calc(390px + 3rem)));
+  justify-content: center;
+  grid-gap: 8vw;
+  margin: 12rem auto;
+  padding: 0 5vw;
+}
+
+.grid__item {
+  padding: 1.5rem;
+}
+
+.grid__item-number {
+  display: block;
+  text-align: right;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--color-link);
+}
+
+.grid__item-img {
+  margin: 1rem 0 1.75rem;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+
+.grid__item-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+.grid__item-tags {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-link);
+  margin: 0 0 1rem 0;
+}
+
+.grid__item-description {
+  color: var(--color-description);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+  padding-right: 1rem;
+}
+
+.grid__item-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid currentColor;
+}
+
+.grid__item-link:hover,
+.grid__item-link:focus {
+  color: var(--color-link-hover);
+}
+
+.svgtext {
+  flex: none;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 10vh 0;
+  overflow: visible;
+}
+
+.svgtext text {
+  fill: #fff;
+  /* Small relative to the curve's amplitude (viewBox 0 0 1000 200) so
+     letters don't overlap themselves at the bends */
+  font-size: 26px;
+  font-family: "Playfair Display", serif;
+}
+
+@media screen and (min-width: 53em) {
+  .grid__item:nth-child(even) {
+    margin-top: 30vh;
+    text-align: right;
+  }
+
+  .grid__item:nth-child(even) .grid__item-img {
+    justify-content: flex-end;
+  }
+
+  .grid__item:nth-child(even) .grid__item-description {
+    padding: 0 0 0 1rem;
+  }
+
+  .grid__item-number {
+    font-size: 4rem;
+  }
+}
