@@ -1,31 +1,37 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 300vh;
+  height: 100svh;
   background: var(--bg-dark);
-}
-
-.hero-sticky {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 100vh;
   overflow: hidden;
 }
 
-.hero-canvas {
+.hero-lens {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  will-change: clip-path;
+}
+
+.hero-lens__stage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(2);
+  will-change: transform;
+}
+
+.hero-lens__stage canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
 
-.hero-canvas--1 {
-  z-index: 2;
-}
-
-.hero-canvas--2 {
-  z-index: 1;
+.hero-lens__img {
+  display: none;
 }
 
 .hero-text-overlay {
@@ -46,7 +52,4 @@
   color: #fff;
   text-align: center;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  filter: blur(0px);
-  will-change: opacity, filter;
 }
