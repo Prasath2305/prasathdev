@@ -12,7 +12,6 @@ interface Project {
   title: string;
   tags: string;
   description: string;
-  cover: string;
   link?: string;
 }
 
@@ -22,7 +21,6 @@ const PROJECTS: Project[] = [
     tags: "Python · YOLO · OpenCV",
     description:
       "A real-time AI system for road safety, combining image recognition for helmet detection with automatic number-plate extraction.",
-    cover: "/img/projects/proj-1.svg",
     link: "https://github.com/Prasath2305/Helmet-and-number-recognition",
   },
   {
@@ -30,36 +28,54 @@ const PROJECTS: Project[] = [
     tags: "React · Node.js · MongoDB",
     description:
       "A full-stack portal engineered from concept to deployment to help students prepare for campus placements.",
-    cover: "/img/projects/proj-2.svg",
+    link: "https://github.com/Prasath2305/placementprep",
   },
   {
     title: "Home Surveillance & Alert Messaging",
     tags: "Python · Computer Vision",
     description:
       "A home security solution with real-time intrusion detection and integrated alert messaging.",
-    cover: "/img/projects/proj-3.svg",
     link: "https://github.com/Prasath2305/Surveillance",
   },
   {
     title: "Artificial Vision",
     tags: "Python",
     description: "Computer vision experiments — see GitHub for details.",
-    cover: "/img/projects/proj-4.svg",
     link: "https://github.com/Prasath2305/Artificial-Vision",
-  },
-  {
-    title: "Election",
-    tags: "HTML · JavaScript",
-    description: "A web app for election-related workflows — see GitHub for details.",
-    cover: "/img/projects/proj-5.svg",
-    link: "https://github.com/Prasath2305/election",
   },
   {
     title: "Substance Abuse Awareness",
     tags: "Python",
     description: "Awareness & detection project — see GitHub for details.",
-    cover: "/img/projects/proj-6.svg",
     link: "https://github.com/Prasath2305/substance-abuse",
+  },
+  {
+    title: "EVS Event Portal",
+    tags: "Next.js · Supabase · Role-Based Access",
+    description:
+      "An event management platform for a college Environmental Studies department, with public event browsing plus department-admin and super-admin tooling for publishing, flyers, and cross-department oversight.",
+    link: "https://github.com/Prasath2305/evs-event-management",
+  },
+  {
+    title: "AcePrep",
+    tags: "Next.js · Supabase · Google Gemini API",
+    description:
+      "An AI-assisted exam and interview preparation app built on Next.js and Supabase, using Google's Gemini models to generate and evaluate practice content.",
+    link: "https://github.com/Prasath2305/AcePrep",
+  },
+  {
+    title: "Dropee",
+    tags: "Next.js · Three.js · WebGL",
+    description:
+      "A delivery-tracking platform with a 3D, WebGL-driven interface built on Next.js and Three.js, backed by dedicated tracking and payment modules.",
+    link: "https://github.com/Prasath2305/dropee",
+  },
+  {
+    title: "SRM IEEE",
+    tags: "Next.js · Supabase",
+    description:
+      "The website for the SRM IEEE student chapter, built with Next.js and Supabase to manage events, members, and chapter content.",
+    link: "https://github.com/Prasath2305/SRM-IEEE",
   },
 ];
 
@@ -88,7 +104,6 @@ function cardHtml(p: Project, i: number) {
   return `
     <div class="grid__item">
       <span class="grid__item-number">${num}</span>
-      <img class="grid__item-img" src="${p.cover}" alt="${p.title}" loading="lazy" />
       <h3 class="grid__item-title">${p.title}</h3>
       <p class="grid__item-tags">${p.tags}</p>
       <p class="grid__item-description">${p.description}</p>

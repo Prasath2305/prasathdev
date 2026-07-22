@@ -24,11 +24,9 @@ Without it, the form shows an inline notice instead of failing silently.
 
 ## What still needs your input
 
-- **Projects** (`src/sections/projects.ts`): populated with your 3 resume
-  projects + 3 GitHub repos, using color-block placeholders instead of real
-  screenshots (there were no screenshots to use). Swap in real images when
-  you have them — replace the `grid__item-img` div per project with an
-  `<img>`.
+- **Projects** (`src/sections/projects.ts`): populated from your GitHub repos,
+  text-only (no cover images). Add an `<img>` back into `cardHtml()` if you
+  want screenshots later.
 - **Music** (`public/covers/*.jpg`): still the original demo's 30 generic
   cover images — swap these for art tied to your actual favorite tracks
   when you have them (same filenames, `image_0.jpg`…`image_29.jpg`).
