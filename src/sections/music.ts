@@ -59,7 +59,7 @@ class Planes {
   }
 
   async fetchCovers() {
-    const urls = new Array(30).fill(0).map((_, i) => `/covers/image_${i}.jpg`);
+    const urls = new Array(26).fill(0).map((_, i) => `/covers/image_${i}.jpg`);
     await this.loadTextureAtlas(urls);
     this.createBlurryAtlas();
     this.fillMeshData();
